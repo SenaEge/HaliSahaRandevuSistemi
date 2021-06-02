@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="halisahaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="MusteriId" />
+    </Key>
+    <Property Name="MusteriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="varchar" MaxLength="50" />
+    <Property Name="Soyad" Type="varchar" MaxLength="50" />
+    <Property Name="TcKimlik" Type="nvarchar" MaxLength="50" />
+    <Property Name="Telefon" Type="varchar" MaxLength="11" />
+    <Property Name="Mail" Type="varchar" MaxLength="50" />
+    <Property Name="Sifre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Rezervasyon">
+    <Key>
+      <PropertyRef Name="RezervasyonId" />
+    </Key>
+    <Property Name="RezervasyonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriIdFk" Type="int" />
+    <Property Name="SahaIdFk" Type="int" />
+    <Property Name="Tarih" Type="datetime" />
+    <Property Name="Saat" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Saha">
+    <Key>
+      <PropertyRef Name="SahaId" />
+    </Key>
+    <Property Name="SahaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SahaAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aktif" Type="bit" />
+    <Property Name="Kapasite" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SahaDetay">
+    <Key>
+      <PropertyRef Name="SahaDetayId" />
+    </Key>
+    <Property Name="SahaDetayId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SahaIdFk" Type="int" />
+    <Property Name="CimTuru" Type="varchar" MaxLength="50" />
+    <Property Name="İkram" Type="varchar" MaxLength="50" />
+    <Property Name="Dus" Type="varchar" MaxLength="50" />
+    <Property Name="SoyunmaOdasi" Type="varchar" MaxLength="50" />
+    <Property Name="Otopark" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Rezervasyon_Musteri">
+    <End Role="Musteri" Type="Self.Musteri" Multiplicity="0..1" />
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="MusteriId" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="MusteriIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervasyon_Saha">
+    <End Role="Saha" Type="Self.Saha" Multiplicity="0..1" />
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saha">
+        <PropertyRef Name="SahaId" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="SahaIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SahaDetay_Saha">
+    <End Role="Saha" Type="Self.Saha" Multiplicity="0..1" />
+    <End Role="SahaDetay" Type="Self.SahaDetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saha">
+        <PropertyRef Name="SahaId" />
+      </Principal>
+      <Dependent Role="SahaDetay">
+        <PropertyRef Name="SahaIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="halisahaModelStoreContainer">
+    <EntitySet Name="Musteri" EntityType="Self.Musteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rezervasyon" EntityType="Self.Rezervasyon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Saha" EntityType="Self.Saha" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SahaDetay" EntityType="Self.SahaDetay" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Rezervasyon_Musteri" Association="Self.FK_Rezervasyon_Musteri">
+      <End Role="Musteri" EntitySet="Musteri" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervasyon_Saha" Association="Self.FK_Rezervasyon_Saha">
+      <End Role="Saha" EntitySet="Saha" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SahaDetay_Saha" Association="Self.FK_SahaDetay_Saha">
+      <End Role="Saha" EntitySet="Saha" />
+      <End Role="SahaDetay" EntitySet="SahaDetay" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

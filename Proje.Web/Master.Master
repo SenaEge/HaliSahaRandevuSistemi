@@ -1,0 +1,503 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Proje.Web.Master"  %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Halı Saha Rezervasyon</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="/Tasarim/TasarimDetay/apple-touch-icon.png">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/normalize.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/transitions.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/prettyPhoto.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/swiper.min.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/jquery-ui.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/animate.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/owl.theme.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/owl.carousel.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/customScrollbar.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/icomoon.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/main.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/color.css">
+	<link rel="stylesheet" href="/Tasarim/TasarimDetay/css/responsive.css">
+	<script src="/Tasarim/TasarimDetay/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 283px;
+        }
+        .auto-style2 {
+            left: 0px;
+            top: 0px;
+            height: 191px;
+        }
+    </style>
+</head>
+<body style="left: 0px; top: 0px; height: 270px">
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<!--************************************
+			Wrapper Start
+	*************************************-->
+	<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
+		<!--************************************
+				Mobile Menu Start
+		*************************************-->
+		<div id="tg-navigationm-mobile" class="tg-navigationm-mobile tg-navigation collapse navbar-collapse">
+			<span id="tg-close" class="tg-close fa fa-close"></span>
+			<div class="tg-colhalf">
+				<ul>
+					<li class="active menu-item-has-children">
+						<a href="Anasayfa.aspx">Anasayfa</a>
+						
+					</li>
+					<li class="menu-item-has-children">
+						<a href="#">team</a>
+						<ul class="tg-dropdown-menu">
+							<li><a href="/Tasarim/TasarimDetay/playergrid-v1.html">playergrid-v1</a></li>
+							<li><a href="/Tasarim/TasarimDetay/playergrid-v2.html">playergrid-v2</a></li>
+							<li><a href="/Tasarim/TasarimDetay/playerdetail.html">playergrid detail</a></li>
+						</ul>
+					</li>
+					<li><a href="Hakkimizda.aspx">Hakkımızda</a></li>
+					<li class="menu-item-has-children">
+						<a href="#">HİZMETLERİMİZ</a>
+						<ul class="tg-dropdown-menu">
+							<li><a href="SahaBilgileri.aspx">Saha BİLGİLERİ</a></li>
+					
+							 <li><a href="MacOncesiSonrasi.aspx">MAÇ ÖNCESİ VE SONRASI</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="tg-colhalf">
+				<ul>
+					<li class="menu-item-has-children">
+						<a href="#">fixtures</a>
+						<ul class="tg-dropdown-menu">
+							<li><a href="/Tasarim/TasarimDetay/fixtures.html">fixtures</a></li>
+							<li><a href="/Tasarim/TasarimDetay/fixturedetail.html">fixture detail</a></li>
+						</ul>
+					</li>
+					<li class="menu-item-has-children">
+						<a href="MesajKutusu.aspx">Rezervasyon</a>
+						
+					</li>
+					<li><a href="Concatt.aspx">İLETİŞİM</a></li>
+					<li class="menu-item-has-children">
+						<a href="#"><i class=" fa fa-navicon"></i></a>
+						<ul>
+							<li><a href="/Tasarim/TasarimDetay/aboutus.html">about us</a></li>
+							<li><a href="/Tasarim/TasarimDetay/shoplist.html">shop list</a></li>
+							<li><a href="/Tasarim/TasarimDetay/shopgrid.html">shop grid</a></li>
+							<li><a href="/Tasarim/TasarimDetay/productsingle.html">shop detail</a></li>
+							<li><a href="/Tasarim/TasarimDetay/bloglist.html">blog list</a></li>
+							<li><a href="/Tasarim/TasarimDetay/bloggrid.html">blog grid</a></li>
+							<li><a href="/Tasarim/TasarimDetay/blogdetail.html">blog detail</a></li>
+							<li><a href="/Tasarim/TasarimDetay/404.html">404 error</a></li>
+							<li><a href="/Tasarim/TasarimDetay/comming-soon.html">comming soon</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--************************************
+				Mobile Menu End
+		*************************************-->
+		<!--************************************
+				Header Start
+		*************************************-->
+		<header id="tg-header" class="tg-header tg-haslayout">
+			<div class="container">
+				<div class="auto-style2">
+					<div class="row">
+						<div class="tg-topbar tg-haslayout">
+							<nav id="tg-topaddnav" class="tg-topaddnav">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-addnavigationm-mobile">
+										<i class="fa fa-arrow-right"></i>
+									</button>
+								</div>
+								<div id="tg-addnavigationm-mobile" class="tg-addnavigationm-mobile collapse navbar-collapse">
+									<div class="tg-colhalf pull-right">
+										<nav class="tg-addnav">
+											<ul>
+												<li><a href="KullaniiciiGirisi.aspx">GİRİŞ YAP</a></li>
+												<li><a href="KullanicciiEkle.aspx">KAYIT OL</a></li>
+												
+												
+											</ul>
+										</nav>
+									</div>
+									<div class="tg-colhalf">
+										<ul class="tg-socialicons">
+											
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
+						<nav id="tg-nav" class="tg-nav brand-center">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-navigationm-mobile">
+									<i class="fa fa-bars"></i>
+								</button>
+								<strong class="tg-logo">
+									<a href="index-2.html"><img src="/Tasarim/TasarimDetay/images/logo.png" alt="image description"></a>
+								</strong>
+							</div>
+							<div id="tg-navigation" class="tg-navigation">
+								<div class="tg-colhalf">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="Anasayfa.aspx">Anasayfa</a>
+                                          
+                                        </li>
+                                       
+                                        <li><a href="Hakkimizda.aspx">Hakkımızda</a></li>
+                                        <li>
+                                            <a href="#">HİZMETLERİMİZ</a>
+                                            <ul class="tg-dropdown-menu">
+                                                <li><a href="SahaBilgileri.aspx">Saha BİLGİLERİ</a></li>
+                                             
+												 <li><a href="MacOncesiSonrasi.aspx">MAÇ ÖNCESİ VE SONRASI</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tg-colhalf">
+                                    <ul>
+                                       
+                                    
+                                        <li>
+                                            <a href="MesajKutusu.aspx">Rezervasyon</a>
+                                            
+                                        </li>
+                                        <li><a href="Concatt.aspx">İLETİŞİM</a></li>
+                                        
+                                    </ul>
+                                </div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--************************************
+				Header End
+		*************************************-->
+		<!--************************************
+				Home Slider Start
+		*************************************-->
+		<div class="tg-sliderbox">
+			<div class="tg-imglayer">
+				<img src="/Tasarim/TasarimDetay/images/bg-pattran.png" alt="image desctription" class="auto-style1">
+			</div>
+			<div id="tg-home-slider" class="tg-home-slider tg-haslayout">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="container">
+							<figure class="floating">
+								&nbsp;</figure>
+							<div class="tg-slider-content">
+							
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		<!--************************************
+				Home Slider End
+		*************************************-->
+		<!--************************************
+				Main Start
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+	<!--************************************
+			Search Start
+	*************************************-->
+	<div class="tg-searchbox">
+		<a id="tg-close-search" class="tg-close-search" href="javascript:void(0)"><span class="fa fa-close"></span></a>
+		<div class="tg-searcharea">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<form class="tg-form-search">
+							<fieldset>
+								<input type="search" class="form-control" placeholder="keyword">
+								<i class="icon-icon_search2"></i>
+							</fieldset>
+						</form>
+						<p>Start typing and press Enter to search</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--************************************
+			Search End
+	*************************************-->
+	<!--************************************
+		LightBoxes Start
+	*************************************-->
+	 <form id="form1" runat="server">
+	<div class="tg-modalbox modal fade" id="tg-login" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="tg-modal-content">
+				<div class="tg-formarea">
+					<div class="tg-border-heading">
+						<h3>Giriş Yap</h3>
+					</div>
+					<form class="tg-loginform" method="post">
+						<fieldset>
+							<table class="auto-style1">
+                <tr>
+                    <td class="auto-style2">Kullanıcı Adı</td>
+                    <td>
+                        <asp:TextBox ID="TxtKadi" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+							 <tr>
+                    <td class="auto-style2">Şifre</td>
+                    <td>
+                        <asp:TextBox ID="TxtSifre" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+							 <tr>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td>
+                        <asp:Button ID="Button1" runat="server" Text="Giriş" OnClick="Button1_Click" />
+                    </td>
+                </tr>
+            </table>
+					
+						</fieldset>
+					</form>
+				</div>
+				<div class="tg-logintype">
+					<div class="tg-border-heading">
+						<h3>Login with</h3>
+					</div>
+					<ul>
+						<li class="tg-facebook"><a href="#">facebook</a></li>
+						<li class="tg-twitter"><a href="#">twitter</a></li>
+						<li class="tg-googleplus"><a href="#">google+</a></li>
+						<li class="tg-linkedin"><a href="#">linkedin</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tg-modalbox modal fade" id="tg-register" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="tg-modal-content">
+				<div class="tg-formarea">
+					<div class="tg-border-heading">
+						<h3>Signup</h3>
+					</div>
+					<form class="tg-loginform" method="post">
+						<fieldset>
+							<div class="form-group">
+								<input type="text" name="userName" class="form-control" placeholder="username">
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="email">
+							</div>
+							<div class="form-group">
+								<div class="tg-note">
+									<i class="fa fa-exclamation-circle"></i>
+									<span>We will email you your password.</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<button class="tg-btn tg-btn-lg" type="submit">Login Now</button>
+							</div>
+							<div class="tg-description">
+								<p>Already have an account? <a href="#">Giriş Yap</a></p>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<div class="tg-logintype">
+					<div class="tg-border-heading">
+						<h3>Signup with</h3>
+					</div>
+					<ul>
+						<li class="tg-facebook"><a href="#">facebook</a></li>
+						<li class="tg-twitter"><a href="#">twitter</a></li>
+						<li class="tg-googleplus"><a href="#">google+</a></li>
+						<li class="tg-linkedin"><a href="#">linkedin</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--************************************
+		LightBoxes End
+	*************************************-->
+	<script src="/Tasarim/TasarimDetay/js/vendor/jquery-library.js"></script>
+	<script src="/Tasarim/TasarimDetay/js/vendor/bootstrap.min.js"></script>
+	<script src="/Tasarim/TasarimDetay/js/customScrollbar.min.js"></script>
+	<script src="/Tasarim/TasarimDetay/js/owl.carousel.js"></script>
+	<script src="/Tasarim/TasarimDetay/js/isotope.pkgd.js"></script>
+	<script src="/Tasarim/TasarimDetay/js/prettyPhoto.js"></script>
+	<script src="/Tasarim/TasarimDetay/js/swiper.min.js"></script>
+	<script src="/Tasarim/TasarimDetay/js/jquery-ui.js"></script>
+	<script src="/Tasarim/TasarimDetay/js/countTo.js"></script>
+	<script src="/Tasarim/TasarimDetay/js/appear.js"></script>
+	<script src="/Tasarim/TasarimDetay/js/main.js"></script>
+   
+       
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        
+    </form>
+    <p>
+        &nbsp;</p>
+	
+		<footer id="tg-footer" class="tg-footer tg-haslayout">
+			<div class="tg-haslayout tg-footerinfobox">
+				<div class="tg-bgboxone"></div>
+				<div class="tg-bgboxtwo"></div>
+				<div class="tg-footerinfo">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="tg-footercol">
+									<div class="tg-posttitle">
+										<h3>Hakkımızda</h3>
+									</div>
+									<div class="tg-description">
+										<p>Tecrübeli teknik kadromuz ile güvenilir ve verimli ekip olma anlayışıyla; müşteri memnuniyeti ve kalite ile birlikte zamanındalık ilkelerinden ödün vermeden, ülke ve dünya standartlarına uygun olarak hizmet sunmaktayız.
+
+Hizmet kalitesi ve bunun ile bağlantılı olarak müşteri memnuniyeti arttırmaya yönelik çalışmalarımız sürekli olarak devam etmektedir. Teknolojinin katkıları ile siz değerleri müşterilerimize her noktada sorunlarınızı giderme ve destek olmak için durmaksızın çalışıyoruz.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="tg-footercol">
+									<div class="tg-posttitle">
+										<h3>Halısahalar</h3>
+									</div>
+									<div class="tg-toprated">
+										<ul>
+											<li>
+												<figure>
+													<a href="#">
+														<img src="/Tasarim/TasarimDetay/images/thumbnails/img-05.jpg" alt="image description">
+													</a>
+												</figure>
+												<div class="tg-productcontent">
+													<h4><a href="#">Güven Spor</a></h4>
+													<span class="tg-price">Adres: Ödemiş, Üç Eyül Mahallesi,Ordu Caddesi,No:143 Ödemiş/İzmir</span>
+												</div>
+											</li>
+											<li>
+												<figure>
+													<a href="#">
+														<img src="/Tasarim/TasarimDetay/images/thumbnails/img-05.jpg" alt="image description">
+													</a>
+												</figure>
+												<div class="tg-productcontent">
+													<h4><a href="#">Turkuaz Halı Saha</a></h4>
+													<span class="tg-price">Adres: İzmir ödemiş cezaevi karşısı Ödemiş/İzmir</span>
+												</div>
+											</li>
+											<li>
+												<figure>
+													<a href="#">
+														<img src="/Tasarim/TasarimDetay/images/thumbnails/img-05.jpg" alt="image description">
+													</a>
+												</figure>
+												<div class="tg-productcontent">
+													<h4><a href="#">Sports Port</a></h4>
+													<span class="tg-price">Adres: Atatürk Mahalle Zafer Mah. Adnan Menderes Blv. 112 Ödemiş/İzmir</span>
+												</div>
+											</li>
+											<li>
+												<figure>
+													<a href="#">
+														<img src="/Tasarim/TasarimDetay/images/thumbnails/img-05.jpg" alt="image description">
+													</a>
+												</figure>
+												<div class="tg-productcontent">
+													<h4><a href="#">Özdemir Spor</a></h4>
+													<span class="tg-price">Adres: Zeytinlik Mahallesi Baş Öğretmen Atatürk Caddesi No:42 Ödemiş/İzmir</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="tg-footercol">
+									<div class="tg-haslayout">
+										<strong class="tg-logo">
+											<a href="#">
+												<img src="/Tasarim/TasarimDetay/images/logo2.png" alt="image description">
+											</a>
+										</strong>
+									</div>
+									<div class="tg-description">
+										<p>Aşağıdaki iletişim adreslerinden günün her saati bizimle iletişime geçebilirsiniz.</p>
+									</div>
+									<ul class="tg-contactinfo">
+										<li>
+											<i class="fa fa-home"></i>
+											<address>Kötekli Mahallesi, 48000 Menteşe/Muğla</address>
+										</li>
+										<li>
+											<i class="fa fa-envelope-o"></i>
+											<a href="#">senaa_ege@hotmail.com</a>
+										</li>
+										<li>
+											<i class="fa fa-phone"></i>
+											<span>+90 586 337 47 30</span>
+										</li>
+									</ul>
+									<div class="tg-haslayout">
+										<a class="tg-btn" href="Concatt.aspx">Daha Fazla</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tg-footerbar">
+				<div class="container">
+				
+					<nav class="tg-footernav">
+						<ul>
+							<li><a href="Anasayfa.aspx">Anasayfa</a></li>
+							<li><a href="Hakkimizda.aspx">Hakkımızda</a></li>
+							<li><a href="SahaBilgileri.aspx">Saha Bilgileri</a></li>
+							<li><a href="MacOncesiSonrasi.aspx">Maç Öncesi ve Sonrası</a></li>
+							<li><a href="MesajKutusu.aspx">Rezervasyon</a></li>
+							<li><a href="Concatt.aspx">İletişim</a></li>
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</footer>
+		    
+</body>
+</html>
+

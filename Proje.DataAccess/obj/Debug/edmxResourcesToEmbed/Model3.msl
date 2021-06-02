@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="halisahaModel1StoreContainer" CdmEntityContainer="halisahaEntities8">
+    <EntitySetMapping Name="Kitap">
+      <EntityTypeMapping TypeName="halisahaModel1.Kitap">
+        <MappingFragment StoreEntitySet="Kitap">
+          <ScalarProperty Name="KitapId" ColumnName="KitapId" />
+          <ScalarProperty Name="KitapAdi" ColumnName="KitapAdi" />
+          <ScalarProperty Name="KitapYazari" ColumnName="KitapYazari" />
+          <ScalarProperty Name="KategoriFk" ColumnName="KategoriFk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Musteri">
+      <EntityTypeMapping TypeName="halisahaModel1.Musteri">
+        <MappingFragment StoreEntitySet="Musteri">
+          <ScalarProperty Name="MusteriId" ColumnName="MusteriId" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="TcKimlik" ColumnName="TcKimlik" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rezervasyon">
+      <EntityTypeMapping TypeName="halisahaModel1.Rezervasyon">
+        <MappingFragment StoreEntitySet="Rezervasyon">
+          <ScalarProperty Name="RezervasyonId" ColumnName="RezervasyonId" />
+          <ScalarProperty Name="MusteriIdFk" ColumnName="MusteriIdFk" />
+          <ScalarProperty Name="SahaIdFk" ColumnName="SahaIdFk" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Saat" ColumnName="Saat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Saha">
+      <EntityTypeMapping TypeName="halisahaModel1.Saha">
+        <MappingFragment StoreEntitySet="Saha">
+          <ScalarProperty Name="SahaId" ColumnName="SahaId" />
+          <ScalarProperty Name="SahaAd" ColumnName="SahaAd" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="Kapasite" ColumnName="Kapasite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SahaDetay">
+      <EntityTypeMapping TypeName="halisahaModel1.SahaDetay">
+        <MappingFragment StoreEntitySet="SahaDetay">
+          <ScalarProperty Name="SahaDetayId" ColumnName="SahaDetayId" />
+          <ScalarProperty Name="SahaIdFk" ColumnName="SahaIdFk" />
+          <ScalarProperty Name="CimTuru" ColumnName="CimTuru" />
+          <ScalarProperty Name="İkram" ColumnName="İkram" />
+          <ScalarProperty Name="Dus" ColumnName="Dus" />
+          <ScalarProperty Name="SoyunmaOdasi" ColumnName="SoyunmaOdasi" />
+          <ScalarProperty Name="Otopark" ColumnName="Otopark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="halisahaModel1.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategori">
+      <EntityTypeMapping TypeName="halisahaModel1.Kategori">
+        <MappingFragment StoreEntitySet="Kategori">
+          <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+          <ScalarProperty Name="KategoriAdı" ColumnName="KategoriAdı" />
+          <ScalarProperty Name="KitapIdFk" ColumnName="KitapIdFk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

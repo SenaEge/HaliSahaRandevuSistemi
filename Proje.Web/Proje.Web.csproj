@@ -1,0 +1,629 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63E3C70F-CC72-4158-BCDA-1B9954B280F2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proje.Web</RootNamespace>
+    <AssemblyName>Proje.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44360</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Concatt.aspx" />
+    <None Include="Connected Services\WSDLServisDeneme\configuration91.svcinfo" />
+    <None Include="Connected Services\WSDLServisDeneme\configuration.svcinfo" />
+    <None Include="Connected Services\WSDLServisDeneme\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Default.aspx" />
+    <Content Include="Hakkimizda.aspx" />
+    <Content Include="HalİSahaEkle.aspx" />
+    <Content Include="KullanicciiEkle.aspx" />
+    <Content Include="KullaniiciiGirisi.aspx" />
+    <Content Include="MacOncesiSonrasi.aspx" />
+    <Content Include="MesajKutusu.aspx" />
+    <Content Include="Rezervation.aspx" />
+    <Content Include="Saha1Detay.aspx" />
+    <Content Include="Saha2Detay.aspx" />
+    <Content Include="Saha3Detay.aspx" />
+    <Content Include="Saha4Detay.aspx" />
+    <Content Include="SahaBilgileri.aspx" />
+    <Content Include="Service1.svc" />
+    <Content Include="SifremiUnuttum.aspx" />
+    <Content Include="Tasarim\TasarimDetay\404.html" />
+    <Content Include="Tasarim\TasarimDetay\aboutus.html" />
+    <Content Include="Tasarim\TasarimDetay\apple-touch-icon.png" />
+    <Content Include="Tasarim\TasarimDetay\blogdetail.html" />
+    <Content Include="Tasarim\TasarimDetay\bloggrid.html" />
+    <Content Include="Tasarim\TasarimDetay\bloglist.html" />
+    <Content Include="Tasarim\TasarimDetay\buyticket.html" />
+    <Content Include="Tasarim\TasarimDetay\comming-soon.html" />
+    <Content Include="Tasarim\TasarimDetay\contactus.html" />
+    <Content Include="Tasarim\TasarimDetay\css\AjaxLoader.html" />
+    <Content Include="Tasarim\TasarimDetay\css\animate.css" />
+    <Content Include="Tasarim\TasarimDetay\css\bootstrap.min.css" />
+    <Content Include="Tasarim\TasarimDetay\css\color.css" />
+    <Content Include="Tasarim\TasarimDetay\css\customScrollbar.css" />
+    <Content Include="Tasarim\TasarimDetay\css\font-awesome.min.css" />
+    <Content Include="Tasarim\TasarimDetay\css\grabbing.html" />
+    <Content Include="Tasarim\TasarimDetay\css\icomoon.css" />
+    <Content Include="Tasarim\TasarimDetay\css\images\ui-icons_444444_256x240.html" />
+    <Content Include="Tasarim\TasarimDetay\css\images\ui-icons_555555_256x240.html" />
+    <Content Include="Tasarim\TasarimDetay\css\images\ui-icons_777620_256x240.html" />
+    <Content Include="Tasarim\TasarimDetay\css\images\ui-icons_777777_256x240.html" />
+    <Content Include="Tasarim\TasarimDetay\css\images\ui-icons_cc0000_256x240.html" />
+    <Content Include="Tasarim\TasarimDetay\css\images\ui-icons_ffffff_256x240.html" />
+    <Content Include="Tasarim\TasarimDetay\css\jquery-ui.css" />
+    <Content Include="Tasarim\TasarimDetay\css\main.css" />
+    <Content Include="Tasarim\TasarimDetay\css\normalize.css" />
+    <Content Include="Tasarim\TasarimDetay\css\owl.carousel.css" />
+    <Content Include="Tasarim\TasarimDetay\css\owl.theme.css" />
+    <Content Include="Tasarim\TasarimDetay\css\prettyPhoto.css" />
+    <Content Include="Tasarim\TasarimDetay\css\responsive.css" />
+    <Content Include="Tasarim\TasarimDetay\css\swiper.min.css" />
+    <Content Include="Tasarim\TasarimDetay\css\transitions.css" />
+    <Content Include="Tasarim\TasarimDetay\fixturedetail.html" />
+    <Content Include="Tasarim\TasarimDetay\fixtures.html" />
+    <Content Include="Tasarim\TasarimDetay\fonts\fontawesome-webfont5b62.svg" />
+    <Content Include="Tasarim\TasarimDetay\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Tasarim\TasarimDetay\fonts\icomoonf55b.svg" />
+    <Content Include="Tasarim\TasarimDetay\images\404-img.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\author\img-01.png" />
+    <Content Include="Tasarim\TasarimDetay\images\bg-commingsoon.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\bg-footer.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\bg-pattran.png" />
+    <Content Include="Tasarim\TasarimDetay\images\bg-video.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-02.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-03.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-04.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-05.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-06.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-07.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-08.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-09.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-10.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-11.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-12.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-13.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-14.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-15.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-16.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\blog\img-18.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-02.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-03.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-04.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-05.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-06.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-07.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-08.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-09.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-10.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-11.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-12.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-13.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-14.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery2\img-15.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-02.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-03.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-04.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-05.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-06.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-07.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-08.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-09.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-10.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\gallery\img-11.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\history-section\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\history-section\img-02.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\history-section\img-03.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\history-section\img-04.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\icon-close.png" />
+    <Content Include="Tasarim\TasarimDetay\images\icon-play.png" />
+    <Content Include="Tasarim\TasarimDetay\images\icon-play1.png" />
+    <Content Include="Tasarim\TasarimDetay\images\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\img-02.png" />
+    <Content Include="Tasarim\TasarimDetay\images\img-03.png" />
+    <Content Include="Tasarim\TasarimDetay\images\logo.png" />
+    <Content Include="Tasarim\TasarimDetay\images\logo2.png" />
+    <Content Include="Tasarim\TasarimDetay\images\match-detail\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\mCSB_buttons.html" />
+    <Content Include="Tasarim\TasarimDetay\images\player-detail\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\player-detail\img-02.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\player\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\player\img-01.png" />
+    <Content Include="Tasarim\TasarimDetay\images\player\img-02.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\player\img-02.png" />
+    <Content Include="Tasarim\TasarimDetay\images\player\img-03.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\player\img-03.png" />
+    <Content Include="Tasarim\TasarimDetay\images\player\img-04.html" />
+    <Content Include="Tasarim\TasarimDetay\images\player\img-04.png" />
+    <Content Include="Tasarim\TasarimDetay\images\player\img-05.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\default\loader.gif" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\default\sprite.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Tasarim\TasarimDetay\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\img-01.png" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\img-02.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\img-03.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\img-04.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\img-05.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\img-06.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\img-07.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\img-08.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\img-09.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\img-10.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\thumbs\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\thumbs\img-02.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\thumbs\img-03.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\thumbs\img-04.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\thumbs\img-05.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\thumbs\img-06.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\shop\thumbs\img-07.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\sidebar\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\slider\img-01.png" />
+    <Content Include="Tasarim\TasarimDetay\images\slider\img-02.png" />
+    <Content Include="Tasarim\TasarimDetay\images\slider\img-03.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\slider\img-04.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\slider\img-05.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\sponser\img-01.png" />
+    <Content Include="Tasarim\TasarimDetay\images\sponser\img-02.png" />
+    <Content Include="Tasarim\TasarimDetay\images\sponser\img-03.png" />
+    <Content Include="Tasarim\TasarimDetay\images\team-logo\logo-01.png" />
+    <Content Include="Tasarim\TasarimDetay\images\team-logo\logo-02.png" />
+    <Content Include="Tasarim\TasarimDetay\images\team-logo\logo-l-02.png" />
+    <Content Include="Tasarim\TasarimDetay\images\team-logo\logo-s-01.png" />
+    <Content Include="Tasarim\TasarimDetay\images\thumbnails\img-01.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\thumbnails\img-02.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\thumbnails\img-03.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\thumbnails\img-04.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\thumbnails\img-05.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\thumbnails\img-06.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\thumbnails\img-07.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\thumbnails\img-08.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\thumbnails\img-09.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\thumbnails\img-10.jpg" />
+    <Content Include="Tasarim\TasarimDetay\images\trophy.png" />
+    <Content Include="Tasarim\TasarimDetay\index-2.html" />
+    <Content Include="Tasarim\TasarimDetay\index.html" />
+    <Content Include="Tasarim\TasarimDetay\index2.html" />
+    <Content Include="Tasarim\TasarimDetay\info%40domain.html" />
+    <Content Include="Tasarim\TasarimDetay\javascript%28%29.html" />
+    <Content Include="Tasarim\TasarimDetay\js\appear.js" />
+    <Content Include="Tasarim\TasarimDetay\js\countTo.js" />
+    <Content Include="Tasarim\TasarimDetay\js\customScrollbar.min.js" />
+    <Content Include="Tasarim\TasarimDetay\js\isotope.pkgd.js" />
+    <Content Include="Tasarim\TasarimDetay\js\jquery-ui.js" />
+    <Content Include="Tasarim\TasarimDetay\js\main.js" />
+    <Content Include="Tasarim\TasarimDetay\js\owl.carousel.js" />
+    <Content Include="Tasarim\TasarimDetay\js\prettyPhoto.js" />
+    <Content Include="Tasarim\TasarimDetay\js\swiper.min.js" />
+    <Content Include="Tasarim\TasarimDetay\js\vendor\bootstrap.min.js" />
+    <Content Include="Tasarim\TasarimDetay\js\vendor\jquery-library.js" />
+    <Content Include="Tasarim\TasarimDetay\js\vendor\modernizr-2.8.3-respond-1.4.2.min.js" />
+    <Content Include="Tasarim\TasarimDetay\matchresult.html" />
+    <Content Include="Tasarim\TasarimDetay\matchresultdetail.html" />
+    <Content Include="Tasarim\TasarimDetay\playerdetail.html" />
+    <Content Include="Tasarim\TasarimDetay\playergrid-v1.html" />
+    <Content Include="Tasarim\TasarimDetay\playergrid-v2.html" />
+    <Content Include="Tasarim\TasarimDetay\productsingle.html" />
+    <Content Include="Tasarim\TasarimDetay\shopgrid.html" />
+    <Content Include="Tasarim\TasarimDetay\shoplist.html" />
+    <Content Include="Tasarim\TasarimDetay\soccermedia-1.html" />
+    <Content Include="Tasarim\TasarimDetay\soccermedia-2.html" />
+    <Content Include="test.aspx" />
+    <Content Include="test2.aspx" />
+    <Content Include="test3.aspx" />
+    <Content Include="test4.aspx" />
+    <Content Include="test5.aspx" />
+    <Content Include="test6.aspx" />
+    <None Include="Connected Services\WSDLServisDeneme\Service1.wsdl" />
+    <None Include="Connected Services\WSDLServisDeneme\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WSDLServisDeneme\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\servisekleme\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\servisekleme\test.disco" />
+    <Content Include="Web.config" />
+    <Content Include="Anasayfa.aspx" />
+    <Content Include="WebServis\test.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Concatt.aspx.cs">
+      <DependentUpon>Concatt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Concatt.aspx.designer.cs">
+      <DependentUpon>Concatt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WSDLServisDeneme\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hakkimizda.aspx.cs">
+      <DependentUpon>Hakkimizda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hakkimizda.aspx.designer.cs">
+      <DependentUpon>Hakkimizda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HalİSahaEkle.aspx.cs">
+      <DependentUpon>HalİSahaEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HalİSahaEkle.aspx.designer.cs">
+      <DependentUpon>HalİSahaEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IService1.cs" />
+    <Compile Include="KullanicciiEkle.aspx.cs">
+      <DependentUpon>KullanicciiEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KullanicciiEkle.aspx.designer.cs">
+      <DependentUpon>KullanicciiEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniiciiGirisi.aspx.cs">
+      <DependentUpon>KullaniiciiGirisi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KullaniiciiGirisi.aspx.designer.cs">
+      <DependentUpon>KullaniiciiGirisi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MacOncesiSonrasi.aspx.cs">
+      <DependentUpon>MacOncesiSonrasi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MacOncesiSonrasi.aspx.designer.cs">
+      <DependentUpon>MacOncesiSonrasi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MesajKutusu.aspx.cs">
+      <DependentUpon>MesajKutusu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MesajKutusu.aspx.designer.cs">
+      <DependentUpon>MesajKutusu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Rezervation.aspx.cs">
+      <DependentUpon>Rezervation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rezervation.aspx.designer.cs">
+      <DependentUpon>Rezervation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Saha1Detay.aspx.cs">
+      <DependentUpon>Saha1Detay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Saha1Detay.aspx.designer.cs">
+      <DependentUpon>Saha1Detay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Saha2Detay.aspx.cs">
+      <DependentUpon>Saha2Detay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Saha2Detay.aspx.designer.cs">
+      <DependentUpon>Saha2Detay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Saha3Detay.aspx.cs">
+      <DependentUpon>Saha3Detay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Saha3Detay.aspx.designer.cs">
+      <DependentUpon>Saha3Detay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Saha4Detay.aspx.cs">
+      <DependentUpon>Saha4Detay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Saha4Detay.aspx.designer.cs">
+      <DependentUpon>Saha4Detay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SahaBilgileri.aspx.cs">
+      <DependentUpon>SahaBilgileri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SahaBilgileri.aspx.designer.cs">
+      <DependentUpon>SahaBilgileri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service1.svc.cs">
+      <DependentUpon>Service1.svc</DependentUpon>
+    </Compile>
+    <Compile Include="SifremiUnuttum.aspx.cs">
+      <DependentUpon>SifremiUnuttum.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SifremiUnuttum.aspx.designer.cs">
+      <DependentUpon>SifremiUnuttum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test2.aspx.cs">
+      <DependentUpon>test2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test2.aspx.designer.cs">
+      <DependentUpon>test2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test3.aspx.cs">
+      <DependentUpon>test3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test3.aspx.designer.cs">
+      <DependentUpon>test3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Anasayfa.aspx.cs">
+      <DependentUpon>Anasayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anasayfa.aspx.designer.cs">
+      <DependentUpon>Anasayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test4.aspx.cs">
+      <DependentUpon>test4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test4.aspx.designer.cs">
+      <DependentUpon>test4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test5.aspx.cs">
+      <DependentUpon>test5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test5.aspx.designer.cs">
+      <DependentUpon>test5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test6.aspx.cs">
+      <DependentUpon>test6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test6.aspx.designer.cs">
+      <DependentUpon>test6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\servisekleme\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebServis\test.asmx.cs">
+      <DependentUpon>test.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master.Master" />
+    <None Include="packages.config" />
+    <Content Include="Tasarim\TasarimDetay\fonts\fontawesome-webfont5b62.eot" />
+    <Content Include="Tasarim\TasarimDetay\fonts\fontawesome-webfont5b62.ttf" />
+    <Content Include="Tasarim\TasarimDetay\fonts\fontawesome-webfont5b62.woff" />
+    <Content Include="Tasarim\TasarimDetay\fonts\fontawesome-webfont5b62.woff2" />
+    <Content Include="Tasarim\TasarimDetay\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Tasarim\TasarimDetay\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Tasarim\TasarimDetay\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Tasarim\TasarimDetay\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Tasarim\TasarimDetay\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Tasarim\TasarimDetay\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Tasarim\TasarimDetay\fonts\icomoonf55b.eot" />
+    <Content Include="Tasarim\TasarimDetay\fonts\icomoonf55b.ttf" />
+    <Content Include="Tasarim\TasarimDetay\fonts\icomoonf55b.woff" />
+    <None Include="Web References\servisekleme\test.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Proje.Business\Proje.Business.csproj">
+      <Project>{0ecc221c-8be0-4a98-9b85-23d23710d18d}</Project>
+      <Name>Proje.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proje.DataAccess\Proje.DataAccess.csproj">
+      <Project>{dfd17490-b1e3-42ef-867a-eadcfa830f0b}</Project>
+      <Name>Proje.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\css\" />
+    <Folder Include="Resource\images\" />
+    <Folder Include="Resource\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://localhost:44360/WebServis/test.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\servisekleme\</RelPath>
+      <UpdateFromURL>https://localhost:44360/WebServis/test.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Proje_Web_servisekleme_test</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WSDLServisDeneme\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54694</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44360/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

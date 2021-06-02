@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dbeab448511d465991b0461eee87237f" Name="Diagram1">
+        <EntityTypeShape EntityType="halisahaModel.Musteri" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="halisahaModel.Rezervasyon" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="halisahaModel.Saha" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="halisahaModel.SahaDetay" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="halisahaModel.FK_Rezervasyon_Musteri" ManuallyRouted="false" />
+        <AssociationConnector Association="halisahaModel.FK_Rezervasyon_Saha" ManuallyRouted="false" />
+        <AssociationConnector Association="halisahaModel.FK_SahaDetay_Saha" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

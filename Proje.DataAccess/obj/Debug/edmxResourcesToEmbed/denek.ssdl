@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="halisahaModel2.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'halisaha.dbo.Kategori' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Kategori">
+    <Key>
+      <PropertyRef Name="KategoriId" />
+    </Key>
+    <Property Name="KategoriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriAdı" Type="nchar" MaxLength="10" />
+    <Property Name="KitapIdFk" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Kitap">
+    <Key>
+      <PropertyRef Name="KitapId" />
+    </Key>
+    <Property Name="KitapId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KitapAdi" Type="nchar" MaxLength="10" />
+    <Property Name="KitapYazari" Type="nchar" MaxLength="10" />
+    <Property Name="KategoriFk" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="halisahaModel2StoreContainer">
+    <EntitySet Name="Kitap" EntityType="Self.Kitap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategori" EntityType="Self.Kategori" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Kategori].[KategoriId] AS [KategoriId], 
+    [Kategori].[KategoriAdı] AS [KategoriAdı], 
+    [Kategori].[KitapIdFk] AS [KitapIdFk]
+    FROM [dbo].[Kategori] AS [Kategori]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

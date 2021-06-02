@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="halisahaModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Kitap">
+    <Key>
+      <PropertyRef Name="KitapId" />
+    </Key>
+    <Property Name="KitapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KitapAdi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="KitapYazari" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="KategoriFk" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="MusteriId" />
+    </Key>
+    <Property Name="MusteriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TcKimlik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefon" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Rezervasyon" Relationship="Self.FK_Rezervasyon_Musteri" FromRole="Musteri" ToRole="Rezervasyon" />
+  </EntityType>
+  <EntityType Name="Rezervasyon">
+    <Key>
+      <PropertyRef Name="RezervasyonId" />
+    </Key>
+    <Property Name="RezervasyonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriIdFk" Type="Int32" />
+    <Property Name="SahaIdFk" Type="Int32" />
+    <Property Name="Tarih" Type="DateTime" Precision="3" />
+    <Property Name="Saat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Musteri" Relationship="Self.FK_Rezervasyon_Musteri" FromRole="Rezervasyon" ToRole="Musteri" />
+    <NavigationProperty Name="Saha" Relationship="Self.FK_Rezervasyon_Saha" FromRole="Rezervasyon" ToRole="Saha" />
+  </EntityType>
+  <EntityType Name="Saha">
+    <Key>
+      <PropertyRef Name="SahaId" />
+    </Key>
+    <Property Name="SahaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SahaAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Aktif" Type="Boolean" />
+    <Property Name="Kapasite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Rezervasyon" Relationship="Self.FK_Rezervasyon_Saha" FromRole="Saha" ToRole="Rezervasyon" />
+    <NavigationProperty Name="SahaDetay" Relationship="Self.FK_SahaDetay_Saha" FromRole="Saha" ToRole="SahaDetay" />
+  </EntityType>
+  <EntityType Name="SahaDetay">
+    <Key>
+      <PropertyRef Name="SahaDetayId" />
+    </Key>
+    <Property Name="SahaDetayId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SahaIdFk" Type="Int32" />
+    <Property Name="CimTuru" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="İkram" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SoyunmaOdasi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Otopark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Saha" Relationship="Self.FK_SahaDetay_Saha" FromRole="SahaDetay" ToRole="Saha" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Kategori">
+    <Key>
+      <PropertyRef Name="KategoriId" />
+    </Key>
+    <Property Name="KategoriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriAdı" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="KitapIdFk" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Rezervasyon_Musteri">
+    <End Role="Musteri" Type="Self.Musteri" Multiplicity="0..1" />
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="MusteriId" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="MusteriIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervasyon_Saha">
+    <End Role="Saha" Type="Self.Saha" Multiplicity="0..1" />
+    <End Role="Rezervasyon" Type="Self.Rezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saha">
+        <PropertyRef Name="SahaId" />
+      </Principal>
+      <Dependent Role="Rezervasyon">
+        <PropertyRef Name="SahaIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SahaDetay_Saha">
+    <End Role="Saha" Type="Self.Saha" Multiplicity="0..1" />
+    <End Role="SahaDetay" Type="Self.SahaDetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Saha">
+        <PropertyRef Name="SahaId" />
+      </Principal>
+      <Dependent Role="SahaDetay">
+        <PropertyRef Name="SahaIdFk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="halisahaEntities8" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Kitap" EntityType="Self.Kitap" />
+    <EntitySet Name="Musteri" EntityType="Self.Musteri" />
+    <EntitySet Name="Rezervasyon" EntityType="Self.Rezervasyon" />
+    <EntitySet Name="Saha" EntityType="Self.Saha" />
+    <EntitySet Name="SahaDetay" EntityType="Self.SahaDetay" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Kategori" EntityType="Self.Kategori" />
+    <AssociationSet Name="FK_Rezervasyon_Musteri" Association="Self.FK_Rezervasyon_Musteri">
+      <End Role="Musteri" EntitySet="Musteri" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervasyon_Saha" Association="Self.FK_Rezervasyon_Saha">
+      <End Role="Saha" EntitySet="Saha" />
+      <End Role="Rezervasyon" EntitySet="Rezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SahaDetay_Saha" Association="Self.FK_SahaDetay_Saha">
+      <End Role="Saha" EntitySet="Saha" />
+      <End Role="SahaDetay" EntitySet="SahaDetay" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

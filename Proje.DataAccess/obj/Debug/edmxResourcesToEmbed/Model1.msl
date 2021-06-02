@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="halisahaModelStoreContainer" CdmEntityContainer="halisahaEntities10">
+    <EntitySetMapping Name="Musteri">
+      <EntityTypeMapping TypeName="halisahaModel.Musteri">
+        <MappingFragment StoreEntitySet="Musteri">
+          <ScalarProperty Name="MusteriId" ColumnName="MusteriId" />
+          <ScalarProperty Name="Ad" ColumnName="Ad" />
+          <ScalarProperty Name="Soyad" ColumnName="Soyad" />
+          <ScalarProperty Name="TcKimlik" ColumnName="TcKimlik" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rezervasyon">
+      <EntityTypeMapping TypeName="halisahaModel.Rezervasyon">
+        <MappingFragment StoreEntitySet="Rezervasyon">
+          <ScalarProperty Name="RezervasyonId" ColumnName="RezervasyonId" />
+          <ScalarProperty Name="MusteriIdFk" ColumnName="MusteriIdFk" />
+          <ScalarProperty Name="SahaIdFk" ColumnName="SahaIdFk" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Saat" ColumnName="Saat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Saha">
+      <EntityTypeMapping TypeName="halisahaModel.Saha">
+        <MappingFragment StoreEntitySet="Saha">
+          <ScalarProperty Name="SahaId" ColumnName="SahaId" />
+          <ScalarProperty Name="SahaAd" ColumnName="SahaAd" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="Kapasite" ColumnName="Kapasite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SahaDetay">
+      <EntityTypeMapping TypeName="halisahaModel.SahaDetay">
+        <MappingFragment StoreEntitySet="SahaDetay">
+          <ScalarProperty Name="SahaDetayId" ColumnName="SahaDetayId" />
+          <ScalarProperty Name="SahaIdFk" ColumnName="SahaIdFk" />
+          <ScalarProperty Name="CimTuru" ColumnName="CimTuru" />
+          <ScalarProperty Name="İkram" ColumnName="İkram" />
+          <ScalarProperty Name="Dus" ColumnName="Dus" />
+          <ScalarProperty Name="SoyunmaOdasi" ColumnName="SoyunmaOdasi" />
+          <ScalarProperty Name="Otopark" ColumnName="Otopark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
